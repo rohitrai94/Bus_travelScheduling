@@ -1,0 +1,482 @@
+/* Updated CSS */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/*------------------------Scroll Bar-----------------------*/
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fde65e;
+  border-radius: 10px;
+}
+
+/*========================Nav Bar=========================*/
+.nav-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 90px;
+  background-color: #0b1c39;
+  box-shadow: 3px 3px 10px lightslategray;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 0 30px;
+}
+
+.logo {
+  color: #fde02f;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: Satisfy;
+}
+
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  display: none; /* Hide initially */
+}
+
+ul.menu {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.menu li {
+  list-style-type: none;
+  font-size: 16px;
+  font-family: "Barlow Condensed";
+  text-align: center;
+  margin-left: 80px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  color: #ff6347;
+}
+
+.menu li a:hover {
+  color: tomato;
+}
+
+/*=============================Banner=============================*/
+#video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1; /* Ensure the video is behind other content */
+}
+
+.banner {
+  background-image: url("https://res.cloudinary.com/dxssqb6l8/image/upload/v1605294054/young-woman-enjoying-beautiful-scenery-of-lago-di-braies-italy-picjumbo-com_aa0fvw.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Add position relative */
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.banner-text-item {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-heading {
+  flex: 1;
+}
+
+.banner-heading h1 {
+  font-size: 130px;
+  font-weight: normal;
+  color: #fde02f;
+  font-family: Satisfy, Roboto;
+  margin-bottom: 20px;
+}
+
+.banner-heading p {
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+  font-family: Roboto;
+}
+
+.banner-heading button {
+  margin-top: 30px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  padding: 15px;
+  cursor: pointer;
+  background-color: #fde02f;
+  font-family: "Barlow Condensed";
+  width: 25%;
+  border-radius: 10px;
+}
+
+.banner-heading button:hover {
+  background-color: tomato;
+}
+
+/*===========================Services===========================*/
+.services {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-item {
+  flex: 1;
+  padding: 50px 10px;
+  border: lightcyan solid 1px;
+  text-align: center;
+  margin: 180px 50px;
+  transition: all 1s;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.service-item:hover {
+  box-shadow: 3px 3px 20px lightsteelblue;
+}
+
+.service-item h2 {
+  font-family: Barlow Condensed;
+  font-size: 18px;
+  width: 120px;
+  color: #001f38;
+  flex: 1;
+}
+
+.service-item img {
+  width: 60px;
+  height: 60px;
+  flex: 1;
+}
+
+/*=========================About Us=========================*/
+/* About Section */
+.about {
+    display: flex;
+    padding: 40px 50px;
+    background-color: #f9f9f9;
+    align-items: center;
+}
+
+.about-img {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.about-text small {
+    font-size: 17px;
+    font-weight: 800;
+    color: #ff6347;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.about-text h3 {
+    font-size: 22px;
+    margin: 20px 0 10px;
+    color: #333;
+}
+
+.about-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-text ul li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.about-text ul li input {
+    margin-right: 10px;
+}
+
+.about-text a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/*===============Footer===================*/
+ /* Footer Styles */
+.footer {
+  background-color: #0b1c39;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-links, .footer-contact, .footer-subscribe {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px 0;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-contact .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer-contact .social-icons a {
+  margin: 0 5px;
+}
+
+.footer-contact .social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-subscribe form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-subscribe input {
+  padding: 10px;
+  width: 80%;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-subscribe button {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  background-color: #222;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+.social-icons a i{
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  ul.menu {
+    flex-flow: column nowrap;
+    background-color: rgb(238, 238, 238);
+    position: fixed;
+    transform: translateX(-100%);
+    top: 90px;
+    left: 0;
+    height: 100%;
+    width: 40%;
+    padding-top: 2rem;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  ul.menu.active {
+    transform: translateX(0);
+  }
+
+  .menu li {
+    color: #fff;
+    margin: 20px 0;
+  }
+
+  .menu li a {
+    font-size: 20px;
+  }
+
+  .banner-heading h1 {
+    font-size: 60px;
+  }
+
+  .banner-heading p {
+    font-size: 24px;
+  }
+
+  .banner-heading button {
+    width: 50%;
+  }
+
+  .services {
+    flex-flow: column nowrap;
+  }
+
+  .service-item {
+    margin: 20px;
+    width: 80%;
+  }
+
+  .about {
+    padding: 50px;
+    flex-flow: column nowrap;
+  }
+
+  .about-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .footer .links {
+    margin-bottom: 30px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 30px;
+  }
+
+  .banner-heading h1 {
+    font-size: 40px;
+  }
+
+  .banner-heading p {
+    font-size: 18px;
+  }
+
+  .banner-heading button {
+    width: 75%;
+  }
+
+  .service-item {
+    width: 90%;
+  }
+}
