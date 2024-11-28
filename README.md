@@ -132,9 +132,5 @@ For any queries, please contact:
 •	Author: Rohit
 •	GitHub: Your GitHub Profile
 
-### Customization
-- Replace placeholders like `your-username`, `rohit@example.com`, and image paths with your actual details.
-- Save this file as `README.md` in the root directory of your project and push it to GitHub.
-4o
 
 
